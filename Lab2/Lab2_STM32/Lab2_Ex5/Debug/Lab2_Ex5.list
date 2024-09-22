@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000155aa  00000000  00000000  00024818  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000465a  00000000  00000000  00039dc2  2**0
+ 17 .debug_line   000046ba  00000000  00000000  00039dc2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000799f3  00000000  00000000  0003e41c  2**0
+ 18 .debug_str    000799ce  00000000  00000000  0003e47c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b7e0f  2**0
+ 19 .comment      00000053  00000000  00000000  000b7e4a  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000da8  00000000  00000000  000b7e64  2**2
+ 20 .debug_frame  00000da8  00000000  00000000  000b7ea0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -112,10 +112,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int hour = 24 , minute = 59 , second = 50;
- 800015e:	2318      	movs	r3, #24
+  int hour = 15 , minute = 8 , second = 50;
+ 800015e:	230f      	movs	r3, #15
  8000160:	61fb      	str	r3, [r7, #28]
- 8000162:	233b      	movs	r3, #59	; 0x3b
+ 8000162:	2308      	movs	r3, #8
  8000164:	61bb      	str	r3, [r7, #24]
  8000166:	2332      	movs	r3, #50	; 0x32
  8000168:	617b      	str	r3, [r7, #20]
@@ -937,10 +937,10 @@ static void MX_GPIO_Init(void)
  8000712:	bf00      	nop
 
 08000714 <updateClockBuffer>:
-			break;
 	  }
 }
 
+//TODO: EX5
 void updateClockBuffer(int hour,  int minute, int* led_buffer)
 {
  8000714:	b480      	push	{r7}

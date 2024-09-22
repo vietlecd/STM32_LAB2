@@ -104,7 +104,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int hour = 24 , minute = 59 , second = 50;
+  int hour = 15 , minute = 8 , second = 50;
   int led_buffer [4] = {1 , 2 , 3 , 4};
   int counter = 0;
   while (1)
