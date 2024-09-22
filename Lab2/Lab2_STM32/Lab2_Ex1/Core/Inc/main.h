@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2024 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under BSD 3-Clause license,
@@ -58,6 +58,26 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define led_red_Pin GPIO_PIN_5
+#define led_red_GPIO_Port GPIOA
+#define enable_0_Pin GPIO_PIN_6
+#define enable_0_GPIO_Port GPIOA
+#define enable_1_Pin GPIO_PIN_7
+#define enable_1_GPIO_Port GPIOA
+#define seg_a_Pin GPIO_PIN_0
+#define seg_a_GPIO_Port GPIOB
+#define seg_b_Pin GPIO_PIN_1
+#define seg_b_GPIO_Port GPIOB
+#define seg_c_Pin GPIO_PIN_2
+#define seg_c_GPIO_Port GPIOB
+#define seg_d_Pin GPIO_PIN_3
+#define seg_d_GPIO_Port GPIOB
+#define seg_e_Pin GPIO_PIN_4
+#define seg_e_GPIO_Port GPIOB
+#define seg_f_Pin GPIO_PIN_5
+#define seg_f_GPIO_Port GPIOB
+#define seg_g_Pin GPIO_PIN_6
+#define seg_g_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
