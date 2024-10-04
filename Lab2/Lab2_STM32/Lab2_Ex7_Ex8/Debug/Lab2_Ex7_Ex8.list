@@ -119,13 +119,13 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  Set_timer(100, 0); //1s
+  Set_timer(90, 0); //1s
  8000168:	2100      	movs	r1, #0
- 800016a:	2064      	movs	r0, #100	; 0x64
+ 800016a:	205a      	movs	r0, #90	; 0x5a
  800016c:	f000 fc18 	bl	80009a0 <Set_timer>
-  Set_timer(50, 1);  //0.5s
+  Set_timer(25, 1);  //250ms
  8000170:	2101      	movs	r1, #1
- 8000172:	2032      	movs	r0, #50	; 0x32
+ 8000172:	2019      	movs	r0, #25
  8000174:	f000 fc14 	bl	80009a0 <Set_timer>
   int hour = 15 , minute = 59 , second = 50;
  8000178:	230f      	movs	r3, #15

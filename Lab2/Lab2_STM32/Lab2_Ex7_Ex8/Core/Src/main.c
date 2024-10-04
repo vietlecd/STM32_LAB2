@@ -113,7 +113,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   Set_timer(100, 0); //1s
-  Set_timer(50, 1);  //0.5s
+  Set_timer(25, 1);  //250ms
   int hour = 15 , minute = 59 , second = 50;
   const int MAX_LED = 4;
   int led_buffer [4] = {1 , 2 , 3 , 4};
@@ -146,7 +146,7 @@ int main(void)
 
 	  if(timer_flag[1] == 1)
 	  {
-		  Set_timer(50, 1);
+		  Set_timer(25, 1);
 		  if(index_led >= MAX_LED)
 		  {
 			  index_led = 0;
