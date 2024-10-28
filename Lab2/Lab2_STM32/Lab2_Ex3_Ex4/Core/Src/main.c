@@ -133,7 +133,7 @@ int main(void)
 				  seg_d_GPIO_Port, seg_d_Pin,
 				  seg_e_GPIO_Port, seg_e_Pin,
 				  seg_f_GPIO_Port, seg_f_Pin,
-				  seg_g_GPIO_Port, seg_g_Pin);
+				  seg_g_GPIO_Port, seg_g_Pin);	
 		  update7SEG(index_led++);
 	  }
     /* USER CODE END WHILE */
