@@ -1,8 +1,8 @@
 /*
  * button.c
  *
- *  Created on: Nov 1, 2024
- *      Author: lenovo
+ *  Created on: Sep 21, 2022
+ *      Author: KAI
  */
 
 #include "button.h"
@@ -48,36 +48,37 @@ GPIO_PinState button_detector(int index)
 }
 
 
-void getKeyInput(){
-	int i = 0;
-	while(i < 3)
-	{
-		  KeyReg_0[i] = KeyReg_1[i];
-		  KeyReg_1[i] = KeyReg_2[i];
-		  KeyReg_2[i] = button_detector(i);
-		  if ((KeyReg_1[i] == KeyReg_0[i]) && (KeyReg_1[i] == KeyReg_2[i]))
-		  {
-		    if (KeyReg_2[i] != KeyReg_3[i])
-		    {
-		      KeyReg_3[i] = KeyReg_2[i];
 
-		      if (KeyReg_3[i] == PRESSED_STATE)
-		      {
-		        TimeOutForKeyPress = 300;
-		        subKeyProcess(i);
-		      }
-		    }
-		    else
-		    {
-		       TimeOutForKeyPress --;
-		        if (TimeOutForKeyPress == 0)
-		        {
-		          KeyReg_3[i] = NORMAL_STATE;
-		        }
-		    }
+void getKeyInput(){
+int i = 0;
+while(i < 3)
+{
+	  KeyReg_0[i] = KeyReg_1[i];
+	  KeyReg_1[i] = KeyReg_2[i];
+	  KeyReg_2[i] = button_detector(i);
+	  if ((KeyReg_1[i] == KeyReg_0[i]) && (KeyReg_1[i] == KeyReg_2[i]))
+	  {
+		if (KeyReg_2[i] != KeyReg_3[i])
+		{
+		  KeyReg_3[i] = KeyReg_2[i];
+
+		  if (KeyReg_3[i] == PRESSED_STATE)
+		  {
+			TimeOutForKeyPress = 300;
+			subKeyProcess(i);
 		  }
-		i++;
-	}
+		}
+		else
+		{
+		   TimeOutForKeyPress --;
+			if (TimeOutForKeyPress == 0)
+			{
+			  KeyReg_3[i] = NORMAL_STATE;
+			}
+		}
+	  }
+	i++;
+}
 }
 
 

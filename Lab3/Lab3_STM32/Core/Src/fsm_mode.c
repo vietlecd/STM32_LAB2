@@ -1,21 +1,23 @@
 /*
  * fsm_mode.c
  *
- *  Created on: Nov 1, 2024
- *      Author: lenovo
+ *  Created on: Nov 19, 2022
+ *      Author: Windows 10
  */
+
 
 #include "fsm_mode.h"
 
 int status_mode = 255;
 
-
 int tmp_red_led_time = 0;
 int tmp_yellow_led_time = 0;
 int tmp_green_led_time = 0;
 
+// Reality Balance Setting
 int reality_balance = 180399;
 
+// ##################
 void reset_led()
 {
 	HAL_GPIO_WritePin(led_north_south_red_GPIO_Port, led_north_south_red_Pin, GPIO_PIN_SET);
@@ -56,12 +58,11 @@ void mode_button_scan()
 	}
 }
 
-//Nút 2: Tăng lên
 void increase_button_scan()
 {
-	if (isButtonPressed(1) == 1)
+	if(isButtonPressed(1) == 1)
 	{
-		switch(status_mode) {
+		switch (status_mode) {
 			case mode_2:
 				tmp_red_led_time = tmp_red_led_time + 100;
 				if(tmp_red_led_time > 9900)
@@ -88,7 +89,6 @@ void increase_button_scan()
 		}
 	}
 }
-
 void reality_balance_red()
 {
 	if(tmp_red_led_time > 9900 || tmp_red_led_time < 900)
@@ -125,7 +125,6 @@ void reality_balance_set()
 	}
 }
 
-//Nút 3: Set mode
 void set_button_scan()
 {
 	if(isButtonPressed(2) == 1)
@@ -137,7 +136,6 @@ void set_button_scan()
 	}
 }
 
-//Hàm chính
 void fsm_mode()
 {
 	switch (status_mode) {
@@ -149,26 +147,24 @@ void fsm_mode()
 			mode_button_scan();
 			break;
 		case mode_2:
-			fsm_traffic_light();
+			fsm_led_blink();
 			mode_button_scan();
 			increase_button_scan();
 			set_button_scan();
 			break;
 		case mode_3:
-			fsm_traffic_light();
+			fsm_led_blink();
 			mode_button_scan();
 			increase_button_scan();
 			set_button_scan();
 			break;
 		case mode_4:
-			fsm_traffic_light();
+			fsm_led_blink();
 			mode_button_scan();
 			increase_button_scan();
 			set_button_scan();
 			break;
 		default:
 			break;
-
 	}
 }
-

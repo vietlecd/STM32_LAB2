@@ -1,9 +1,10 @@
 /*
- * fsm_trffic_light.c
+ * fsm_traffic_light.c
  *
- *  Created on: Nov 1, 2024
- *      Author: lenovo
+ *  Created on: Nov 19, 2022
+ *      Author: Windows 10
  */
+
 
 #include "fsm_traffic_light.h"
 
@@ -22,7 +23,9 @@ int tmp_green_traffic_led_time = 0;
 
 int enable_trigger = 0;
 
-// ########### Chức năng display 2 con led 7 đoạn ######################## //
+// ############################################################################################################
+
+//   MY FUNCTION   ##################
 void display_7_seg_north_south(int index)
 {
 	GPIO_TypeDef* seg_a_GPIO_PORT = seg_north_south_a_GPIO_Port; uint16_t seg_a_PIN = seg_north_south_a_Pin;
@@ -233,7 +236,6 @@ void display_7_seg_east_west(int index)
 	}
 }
 
-// ########### Chức năng hiển thị dành cho đèn giao thông ################ //
 void display_traffic_led(int color_traffic_led, int positon)
 {
 	switch (positon) {
@@ -284,11 +286,9 @@ void display_traffic_led(int color_traffic_led, int positon)
 	}
 }
 
-// ########################################################### //
-
 void tmp_val_init()
 {
-	tmp_red_traffic_led_time = red_traffic_led_time/100; // chuyển đổi sang đơn vị s.
+	tmp_red_traffic_led_time = red_traffic_led_time/100;
 	tmp_yellow_traffic_led_time = yellow_traffic_led_time/100;
 	tmp_green_traffic_led_time = green_traffic_led_time/100;
 }
@@ -336,7 +336,6 @@ void timer_scan_7seg(int position, int* current_tmp_time)
 			break;
 	}
 }
-
 
 void enable_trigger_scan()
 {
@@ -397,11 +396,12 @@ void enable_display_7seg(int index_0, int index_1, int position)
 	}
 }
 
+// ############################################################################################################
 
-//Chế độ FSM MODE 1
+//   MY FSM MODE 1   ##################
 void fsm_traffic_light()
 {
-	int initial_red_position = north_south; // bắt đầu vói hướng đông nam
+	int initial_red_position = north_south;
 	int index_0 = 0;
 	int index_1 = 0;
 	switch (initial_red_position) {
@@ -671,8 +671,3 @@ void fsm_traffic_light()
 			break;
 	}
 }
-
-
-
-
-
