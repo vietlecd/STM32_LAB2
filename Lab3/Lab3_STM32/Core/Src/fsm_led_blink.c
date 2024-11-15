@@ -1,9 +1,4 @@
-/*
- * fsm_led_blink.c
- *
- *  Created on: Nov 20, 2022
- *      Author: Windows 10
- */
+
 #include "fsm_leb_blink.h"
 
 void blink_led(int led_color)
@@ -47,11 +42,13 @@ void mode_7seg_display(int index_0, int index_1, int my_mode)
 			HAL_GPIO_WritePin(enable_0_GPIO_Port, enable_0_Pin, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(enable_1_GPIO_Port, enable_1_Pin, GPIO_PIN_SET);
 			display_7_seg_north_south(index_0);
+			//display_7_seg_east_west(index_0);
 			break;
 		case 1:
 			HAL_GPIO_WritePin(enable_0_GPIO_Port, enable_0_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(enable_1_GPIO_Port, enable_1_Pin, GPIO_PIN_RESET);
 			display_7_seg_north_south(index_1);
+			//display_7_seg_east_west(index_1);
 			break;
 		default:
 			break;

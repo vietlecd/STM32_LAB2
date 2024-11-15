@@ -1,9 +1,4 @@
-/*
- * global.h
- *
- *  Created on: Nov 5, 2022
- *      Author: Windows 10
- */
+
 
 #ifndef INC_GLOBAL_H_
 #define INC_GLOBAL_H_

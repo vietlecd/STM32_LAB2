@@ -1,8 +1,8 @@
-fsm_mode.c:21:6:reset_led	8	static
-fsm_mode.c:32:6:mode_button_scan	8	static
-fsm_mode.c:61:6:increase_button_scan	8	static
-fsm_mode.c:92:6:reality_balance_red	4	static
-fsm_mode.c:101:6:reality_balance_green	4	static
-fsm_mode.c:110:6:reality_balance_set	8	static
-fsm_mode.c:128:6:set_button_scan	8	static
-fsm_mode.c:139:6:fsm_mode	8	static
+fsm_mode.c:15:6:reset_led	8	static
+fsm_mode.c:26:6:mode_button_scan	8	static
+fsm_mode.c:55:6:increase_button_scan	8	static
+fsm_mode.c:86:6:reality_balance_red	4	static
+fsm_mode.c:95:6:reality_balance_green	4	static
+fsm_mode.c:104:6:reality_balance_set	8	static
+fsm_mode.c:122:6:set_button_scan	8	static
+fsm_mode.c:133:6:fsm_mode	8	static

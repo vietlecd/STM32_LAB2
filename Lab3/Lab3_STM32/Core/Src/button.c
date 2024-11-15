@@ -1,9 +1,3 @@
-/*
- * button.c
- *
- *  Created on: Sep 21, 2022
- *      Author: KAI
- */
 
 #include "button.h"
 

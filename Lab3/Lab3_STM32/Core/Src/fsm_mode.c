@@ -1,9 +1,3 @@
-/*
- * fsm_mode.c
- *
- *  Created on: Nov 19, 2022
- *      Author: Windows 10
- */
 
 
 #include "fsm_mode.h"

@@ -1,9 +1,4 @@
-/*
- * fsm_traffic_light.c
- *
- *  Created on: Nov 19, 2022
- *      Author: Windows 10
- */
+
 
 
 #include "fsm_traffic_light.h"

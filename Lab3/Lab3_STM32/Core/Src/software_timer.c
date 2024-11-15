@@ -1,9 +1,4 @@
-/*
- * software_timer.c
- *
- *  Created on: Oct 17, 2022
- *      Author: Windows 10
- */
+
 
 #include "software_timer.h"
 
