@@ -8,8 +8,8 @@
 #ifndef INC_GLOBAL_H_
 #define INC_GLOBAL_H_
 
+#include <scheduler.h>
 #include "main.h"
-#include "scherduler.h"
 #include <stdint.h>
 
 void led_red_toggle();

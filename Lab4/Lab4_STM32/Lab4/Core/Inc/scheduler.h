@@ -1,5 +1,5 @@
-#ifndef INC_SCHERDULER_H_
-#define INC_SCHERDULER_H_
+#ifndef INC_SCHEDULER_H_
+#define INC_SCHEDULER_H_
 
 #include "global.h"
 
@@ -25,4 +25,4 @@ void SCH_Dispatch_Task(void);
 
 void SCH_Delete(uint32_t ID);
 
-#endif /* INC_SCHERDULER_H_ */
+#endif /* INC_SCHEDULER_H_ */
