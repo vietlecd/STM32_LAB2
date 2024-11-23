@@ -1,10 +1,3 @@
-/*
- * global.c
- *
- *  Created on: Nov 25, 2022
- *      Author: Windows 10
- */
-
 #include "global.h"
 
 void led_red_toggle()

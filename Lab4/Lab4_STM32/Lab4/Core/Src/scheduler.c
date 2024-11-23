@@ -1,10 +1,3 @@
-/*
- * scheduler.c
- *
- *  Created on: Nov 25, 2022
- *      Author: Windows 10
- */
-
 #include "scherduler.h"
 
 sTasks SCH_tasks_G[SCH_MAX_TASKS];

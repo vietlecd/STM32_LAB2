@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2024 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under BSD 3-Clause license,
@@ -94,7 +94,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  SCH_Add_Task(led_red_toggle, 1000, 2000);
+  SCH_Add_Task(led_red_toggle, 1000, 2000); //delay 1 giây, lặp lại mỗi 2s, các cái dưới tg tự
   SCH_Add_Task(led_orange_toggle, 2000, 2000);
   SCH_Add_Task(led_yellow_toggle, 4000, 2000);
   SCH_Add_Task(led_green_toggle, 8000, 2000);
@@ -220,7 +220,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	SCH_Update();
+	SCH_Update(); //gọi mỗi
 }
 /* USER CODE END 4 */
 

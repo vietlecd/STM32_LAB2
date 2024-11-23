@@ -1,10 +1,3 @@
-/*
- * scherduler.h
- *
- *  Created on: Nov 25, 2022
- *      Author: Windows 10
- */
-
 #ifndef INC_SCHERDULER_H_
 #define INC_SCHERDULER_H_
 
@@ -20,7 +13,7 @@ typedef struct
 	uint32_t	TaskID;
 }sTasks;
 
-#define SCH_MAX_TASKS 	60
+#define SCH_MAX_TASKS 	8
 
 void SCH_Init(void);
 
