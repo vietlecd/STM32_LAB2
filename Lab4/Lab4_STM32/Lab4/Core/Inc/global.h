@@ -1,21 +1,40 @@
 /*
  * global.h
  *
- *  Created on: Nov 25, 2022
- *      Author: Windows 10
+ *  Created on: Nov 4, 2024
+ *      Author: HP
  */
 
 #ifndef INC_GLOBAL_H_
 #define INC_GLOBAL_H_
 
-#include <scheduler.h>
+#include "button_reading.h"
+#include "display_7seg.h"
+#include "fsm_automatic.h"
+#include "fsm_setting.h"
 #include "main.h"
-#include <stdint.h>
+#include "software_timer.h"
+#include "scheduler.h"
 
-void led_red_toggle();
-void led_orange_toggle();
-void led_yellow_toggle();
-void led_green_toggle();
-void led_blue_toggle();
+extern int autoStatus;
+
+extern int timeRed;
+extern int timeYellow;
+extern int timeGreen;
+
+extern int count;
+
+extern int FSM_STATUS;
+extern int valueSetting;
+extern int BLINKY_LED_STATUS;
+
+extern int led_buffer[];
+extern int STATUS_7SEG;
+
+extern int count_7SEG;
+extern int count_auto;
+extern int count_blink;
+
+extern int TIME_CYCLE;
 
 #endif /* INC_GLOBAL_H_ */
