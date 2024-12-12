@@ -1,8 +1,8 @@
 /*
  * softwareTimer.c
  *
- *  Created on: Dec 18, 2023
- *      Author: hieun
+ *  Created on: Nov 22, 2024
+ *      Author: lenovo
  */
 
 #include "softwareTimer.h"
